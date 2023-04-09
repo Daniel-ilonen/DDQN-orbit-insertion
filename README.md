@@ -7,7 +7,7 @@ The enviroment consists of a rocket, a planet, and an atmosphere. The atmosphere
 The enviroment requires PyGame, but its definitions and return parameters should be similar to the ones used by openAI/Gym for ease of testing on other enviroments.
 ![Picture of Enviroment](/plots/Screenshot.png?raw=true "Enviroment")
 ## DDQN
-To encourage the DDQN agent to reach orbit we use some reward function. A reward function based on $\theta*\rho^{-1}$ seems to work well, where $\theta$ is the angle traveled around the planet, and $\rho$ is the atmospheric density of the current position. 
+To encourage the DDQN agent to reach orbit we use some reward function. A reward function based on $`\theta*\rho^{-1}`$ seems to work well, where $`\theta`$ is the angle traveled around the planet, and $`\rho`$ is the atmospheric density of the current position. 
 
 ### Hyperparameters
 The hyperparameters include  
@@ -24,7 +24,7 @@ The hyperparameters include
     params['batch_size'] = 128
 ```
 where "replays_per_session" indicates how many times agent Q1 uses a batch to learn from memory after every episode before the Q1 weights are copied to Q2. 
-Epsilon is right now set to $\epsilon=e^{ln(\epsilon_{min})/(replays_per_session*episodes*0.75)}$
+Epsilon is right now set to $`\epsilon=e^{ln(\epsilon_{min})/(replays_per_session*episodes*0.75)}`$
 
 ## Evaluation
 ![Plot](/plots/Average_reward.png?raw=true "Training")
