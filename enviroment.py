@@ -79,7 +79,7 @@ class enviroment:
         return state
 
     def set_reward(self):
-        self.reward =1#(1-self.P1.rho)*5*self.P1.theta_traveled
+        self.reward =(1-self.P1.rho)*5*self.P1.theta_traveled
         return self.reward   
     
     def render(self):

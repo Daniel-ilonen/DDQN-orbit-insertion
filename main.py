@@ -51,12 +51,11 @@ def run_manual(params): #Runs the game in manual mode, letting the user control 
             #env.FramePerSec.tick(env.FPS)
         if done:
             env.reset()
-            score=0
             
 
 def define_parameters():
     params = dict()
-    params['replays_per_session']=5
+    params['replays_per_session']=10
     params['epsilon_max'] = 1.0
     params['epsilon_min'] = 0.01
     params['gamma'] = 0.95
@@ -174,5 +173,5 @@ if __name__ == '__main__':
             quit_pygame()
     stats = pstats.Stats(pr)
     stats.sort_stats(pstats.SortKey.TIME)
-    stats.dump_stats("/media/daniel/Work/Documents/Python/AI orbiter/cprofiler.prof")
+    stats.dump_stats("cprofiler.prof")
     quit_pygame()
